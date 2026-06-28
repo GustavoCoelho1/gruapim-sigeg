@@ -60,7 +60,7 @@ public class EntregaController {
     @PostMapping("/{id}aceitar")
     @Operation(summary = "Listar as entregas aceitas")
     //sei la o que é UUID, só segui o bonde
-    public EntregaResponse aceitarEntrega(@PathVariable UUID id Authentication auth){
+    public EntregaResponse aceitarEntrega(@PathVariable UUID id, Authentication auth) {
         return entregaService.aceitarEntrega(id, auth.getName());
     }
     @GetMapping("/roteirizadas")
